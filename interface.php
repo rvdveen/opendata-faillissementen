@@ -25,6 +25,9 @@
 	</script>
 </head>
 <body id="loadingelement">
+	<p>
+		Typ een stad in en druk op de knop 'Do!'. Met gebruikmaking van de openkvk API zullen de laatste 50 falliesementen in deze stad getoond worden.
+	</p>
 	<form id="interfaceform" method="GET" action="kvk-fail.php">
 		<label>Stad: </label><input id="city" type="text" name="city" value="Enschede" />
 		<input id="submitbutton" type="submit" name="submit" value="Do!" />
