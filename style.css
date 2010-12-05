@@ -1,0 +1,7 @@
+html { height: 100%; font-family: sans-serif; }
+body { height: 100%; margin: 0px; padding: 16px 0px 0px 0px; }
+form { text-align: center; }
+#map_canvas { height: 700px; width: 100%; }
+.ajax-loading {
+	background: url('ajax-loader.gif') no-repeat;
+}
