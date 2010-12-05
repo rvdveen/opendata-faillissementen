@@ -26,15 +26,15 @@ function doRequest(e) {
 	$('city').addClass('ajax-loading');
 
 	form.set('send', {onComplete: function(response) {
-		console.log('Request complete');
+		//console.log('Request complete');
 		var jsonObject = JSON.decode(response);
-		console.log(jsonObject);
+		//console.log(jsonObject);
 		$('submitbutton').set('disabled', false);
 		$('city').removeClass('ajax-loading');
 		processList(jsonObject);
 	}});
 
-	console.log('Sending request');
+	//console.log('Sending request');
 	form.send();
 }
  
@@ -42,9 +42,9 @@ function processList(JSONObject){
 	var lastAddress;
 	Array.each(JSONObject, function(item, index) {
 		if (item.adres == null) {
-			console.log("No address, skipping");
+			//console.log("No address, skipping");
 		} else if (item.adres == lastAddress) {
-			console.log("Duplicate address, skipping");
+			//console.log("Duplicate address, skipping");
 		} else {
 			// Throttle the codeAddress calls to prevent gmap's OVER_QUERY_LIMIT
 			createMarker.delay(index * 200, item, item.adres +", "+ item.postcode +", "+ item.plaats);
@@ -55,7 +55,7 @@ function processList(JSONObject){
 }
 
 function createMarker(address) {
-	console.log('codeAddress for ' + address);
+	//console.log('codeAddress for ' + address);
 	var latlong;
 	//Hier gaan we geocoden
 	geocoder.geocode( {
